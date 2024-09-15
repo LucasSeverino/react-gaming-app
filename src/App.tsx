@@ -1,9 +1,21 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
-function App() {
+const App = () => {
+
+  const [showAlert, setShowAlert] = useState(false);
+
+
   return (
     <div>
-      <Alert>Hello <span>World</span></Alert>
+      {
+        showAlert && <Alert onClose={() => setShowAlert(false)}>Button Clicked!</Alert>
+      }
+      
+      <Button buttonType="primary" onClick={() => setShowAlert(true)}>
+        Primary Button
+      </Button>
     </div>
   );
 }
