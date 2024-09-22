@@ -1,0 +1,8 @@
+body {
+    padding: 20px;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
